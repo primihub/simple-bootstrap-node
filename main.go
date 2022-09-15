@@ -18,8 +18,8 @@ import (
 var logger = log.Logger("bootsrap")
 
 func main() {
-	log.SetAllLoggers(log.LevelDebug)
-	log.SetLogLevel("bootsrap", "debug")
+	log.SetAllLoggers(log.LevelInfo)
+	log.SetLogLevel("bootsrap", "info")
 	help := flag.Bool("help", false, "Display Help")
 	listenHost := flag.String("host", "0.0.0.0", "The bootstrap node host listen address\n")
 	port := flag.Int("port", 4001, "The bootstrap node listen port")
