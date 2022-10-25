@@ -10,16 +10,16 @@ import (
 
 	"github.com/ipfs/go-log/v2"
 	"github.com/libp2p/go-libp2p"
-	"github.com/libp2p/go-libp2p-core/crypto"
 	dht "github.com/libp2p/go-libp2p-kad-dht"
+	"github.com/libp2p/go-libp2p/core/crypto"
 	"github.com/multiformats/go-multiaddr"
 )
 
 var logger = log.Logger("bootsrap")
 
 func main() {
-	log.SetAllLoggers(log.LevelDebug)
-	log.SetLogLevel("bootsrap", "debug")
+	log.SetAllLoggers(log.LevelInfo)
+	log.SetLogLevel("bootsrap", "info")
 	help := flag.Bool("help", false, "Display Help")
 	listenHost := flag.String("host", "0.0.0.0", "The bootstrap node host listen address\n")
 	port := flag.Int("port", 4001, "The bootstrap node listen port")
